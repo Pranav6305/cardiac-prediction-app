@@ -1,16 +1,32 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import "./App.css";
 
 function Welcome() {
-  const location = useLocation();
-  const user = location.state?.user;
-
   return (
-    <div className="container">
-      <h1>Welcome, {user?.name || "User"}!</h1>
-      <p>Email: {user?.email}</p>
-      <p>Age: {user?.age}</p>
-      <p>Gender: {user?.gender}</p>
+    <div className="dashboard">
+      <h1 className="dashboard-title">Health Monitoring Dashboard</h1>
+
+      <div className="dashboard-grid">
+        <div className="dashboard-card food-log">
+          <h2>Food Log</h2>
+          <div className="placeholder">Data will appear here</div>
+        </div>
+
+        <div className="dashboard-card sleep-log">
+          <h2>Sleep Log</h2>
+          <div className="placeholder">Data will appear here</div>
+        </div>
+
+        <div className="dashboard-card steps-log">
+          <h2>Steps Log</h2>
+          <div className="placeholder">Data will appear here</div>
+        </div>
+
+        <div className="dashboard-card risk-score">
+          <h2>Risk Score</h2>
+          <div className="placeholder">Data will appear here</div>
+        </div>
+      </div>
     </div>
   );
 }

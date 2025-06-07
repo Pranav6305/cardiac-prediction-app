@@ -74,3 +74,49 @@ button:hover {
   cursor: pointer;
   text-decoration: underline;
 }
+.dashboard {
+  padding: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9;
+  min-height: 100vh;
+}
+
+.dashboard-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+  color: #333;
+}
+
+.dashboard-grid {
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.dashboard-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard-card h2 {
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.placeholder {
+  background-color: #eaeaea;
+  height: 120px;
+  width: 100%;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  font-style: italic;
+}
