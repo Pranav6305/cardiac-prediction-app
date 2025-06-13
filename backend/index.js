@@ -32,6 +32,10 @@ app.post("/api/signup", async (req, res) => {
   }
 });
 
+// IntroSurvey route
+const introSurveyRoutes = require("./routes/introsurveyRoutes");
+app.use("/api/introsurvey", introSurveyRoutes);
+
 // Login route
 app.post("/api/login", async (req, res) => {
   const { email, password } = req.body;
@@ -53,3 +57,4 @@ app.listen(PORT, () => {
 app.get("/", (req, res) => {
   res.send("API is running");
 });
+

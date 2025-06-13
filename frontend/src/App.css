@@ -1,4 +1,4 @@
-/* Icon styles */
+/* App.css */
 .icon-home,
 .icon-user,
 .icon-bell,
@@ -977,3 +977,4 @@ body {
     transform: rotate(360deg);
   }
 }
+

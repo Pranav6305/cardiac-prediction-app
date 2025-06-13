@@ -24,9 +24,12 @@ function Signup() {
     try {
       const res = await axios.post("http://localhost:5000/api/signup", user);
       alert(res.data.message);
-      navigate("/login");
+
+      // ✅ Pass email to IntroSurvey via route state
+      navigate("/survey", { state: { email: user.email } });
+
     } catch (err) {
-      if (err.response && err.response.data && err.response.data.message) {
+      if (err.response?.data?.message) {
         alert(err.response.data.message);
       } else {
         alert("Something went wrong. Please try again.");
@@ -44,18 +47,21 @@ function Signup() {
           placeholder="Name"
           value={user.name}
           onChange={handleChange}
+          required
         />
         <input
           type="date"
           name="dob"
           value={user.dob}
           onChange={handleChange}
+          required
         />
         <input
           name="email"
           placeholder="Email"
           value={user.email}
           onChange={handleChange}
+          required
         />
         <input
           name="password"
@@ -63,6 +69,7 @@ function Signup() {
           placeholder="Password"
           value={user.password}
           onChange={handleChange}
+          required
         />
         <input
           name="age"
@@ -70,11 +77,13 @@ function Signup() {
           placeholder="Age"
           value={user.age}
           onChange={handleChange}
+          required
         />
-        <select name="gender" value={user.gender} onChange={handleChange}>
+        <select name="gender" value={user.gender} onChange={handleChange} required>
           <option value="">Select Gender</option>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
+          <option value="Other">Other</option>
         </select>
         <button type="submit">Signup</button>
       </form>
