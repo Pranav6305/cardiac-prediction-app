@@ -150,17 +150,17 @@
   .container {
     padding: 1rem;
   }
-  
+
   .container h1 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
   }
-  
+
   .container form {
     padding: 2rem;
     gap: 1.25rem;
   }
-  
+
   .container input,
   .container select,
   .container button[type="submit"] {
@@ -222,7 +222,8 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    sans-serif;
   background-color: #f8fafc;
   color: #1f2937;
   line-height: 1.5;
@@ -230,7 +231,7 @@ body {
 
 .heartwise-app {
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
     "navbar navbar navbar"
     "sidebar main right-panel";
   grid-template-columns: 240px 1fr 320px;
@@ -862,35 +863,35 @@ body {
 
 @media (max-width: 768px) {
   .heartwise-app {
-    grid-template-areas: 
+    grid-template-areas:
       "navbar"
       "main";
     grid-template-columns: 1fr;
     grid-template-rows: 60px 1fr;
   }
-  
+
   .sidebar,
   .right-panel {
     display: none;
   }
-  
+
   .trends-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .summary-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .nav-center {
     flex: 1;
     justify-content: center;
   }
-  
+
   .nav-tabs {
     display: none;
   }
-  
+
   .main-content {
     padding: 16px;
   }
@@ -900,19 +901,19 @@ body {
   .navbar {
     padding: 0 16px;
   }
-  
+
   .app-title {
     font-size: 20px;
   }
-  
+
   .welcome-section h2 {
     font-size: 24px;
   }
-  
+
   .action-buttons {
     flex-direction: column;
   }
-  
+
   .btn {
     text-align: center;
   }
@@ -959,7 +960,7 @@ body {
 }
 
 .loading::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -977,4 +978,223 @@ body {
     transform: rotate(360deg);
   }
 }
+.survey-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
 
+.survey-container h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.survey-container .subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.survey-form {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.survey-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.survey-section h3 {
+  color: #374151;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  color: #374151;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.survey-form input,
+.survey-form select,
+.survey-form textarea {
+  padding: 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background: #f9fafb;
+  outline: none;
+}
+
+.survey-form input:focus,
+.survey-form select:focus,
+.survey-form textarea:focus {
+  border-color: #6366f1;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  transform: translateY(-1px);
+}
+
+.survey-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.survey-form input::placeholder,
+.survey-form textarea::placeholder {
+  color: #9ca3af;
+}
+
+.survey-form select {
+  cursor: pointer;
+  color: #374151;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  background: #f9fafb;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 120px;
+}
+
+.checkbox-item:hover {
+  border-color: #6366f1;
+  background: #f0f9ff;
+}
+
+.checkbox-item input[type="checkbox"] {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  background: none;
+  transform: none;
+}
+
+.checkbox-item.checked {
+  border-color: #6366f1;
+  background: #eff6ff;
+  color: #6366f1;
+  font-weight: 500;
+}
+
+.survey-form button[type="submit"] {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: white;
+  border: none;
+  padding: 1.25rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+}
+
+.survey-form button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+}
+
+.survey-form button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* Progress indicator */
+.progress-indicator {
+  margin-bottom: 2rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #fbbf24;
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.progress-text {
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .survey-container {
+    padding: 1rem;
+  }
+
+  .survey-container h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .survey-container .subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .survey-form {
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+
+  .checkbox-group {
+    flex-direction: column;
+  }
+
+  .checkbox-item {
+    min-width: auto;
+  }
+}

@@ -1,4 +1,3 @@
-repair works in the finished pages
 finish db and rest of the pages
 notification system
 score system
