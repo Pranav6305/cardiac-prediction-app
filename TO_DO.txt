@@ -1,4 +1,4 @@
-finish db and rest of the pages
+finish db and rest of the pages (sleeplog db&frontend, health insights frontend)
 notification system
 score system
 choose a suitable ml model

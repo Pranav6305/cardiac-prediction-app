@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const User = require("./models/User");
+const foodRoutes = require('./routes/foodRoutes');
 
 const app = express();
 const PORT = 5000;
@@ -50,6 +51,8 @@ app.post("/api/login", async (req, res) => {
   }
 });
 
+app.use('/api', foodRoutes);
+
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
@@ -57,4 +60,3 @@ app.listen(PORT, () => {
 app.get("/", (req, res) => {
   res.send("API is running");
 });
-

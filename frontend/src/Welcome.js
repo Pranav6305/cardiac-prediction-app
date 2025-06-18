@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom'; // Add at top
 
 const HeartWiseDashboard = () => {
+  const navigate = useNavigate();
   const [userData] = useState({
     name: localStorage.getItem("userName"),
     dailyStats: {
@@ -185,7 +187,7 @@ const HeartWiseDashboard = () => {
           <h2>Welcome back, {userData.name}!</h2>
           <p>Here's your health overview for today.</p>
           <div className="action-buttons">
-            <button className="btn btn-primary">Log Meal</button>
+            <button className="btn btn-primary" onClick={() => navigate('/food-update')}>Log Meal</button>
             <button className="btn btn-secondary">Check Your Risk</button>
           </div>
         </div>
